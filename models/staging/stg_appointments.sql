@@ -4,7 +4,9 @@ with deduped as (
     from {{ ref('appointments_raw') }}
     qualify row_number() over (
         partition by appointment_id
-        order by created_at
+        -- every column as tiebreak: pick stays deterministic even if copies diverge
+        order by created_at, scheduled_at, status, invoice_total,
+            patient_id, client_id, location_id, appointment_type, provider_id
     ) = 1
 )
 

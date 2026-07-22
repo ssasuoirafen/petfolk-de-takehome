@@ -5,6 +5,8 @@
 -- (default-deny). In production this CASE body becomes a Snowflake masking policy.
 {% macro mask_pii(column, kind='email') %}
     case
+        -- null reveals nothing; masking it would fabricate a value
+        when {{ column }} is null then null
         when getvariable('pii_role') = '{{ var("pii_unmask_role", "unmask_pii_data") }}'
             then {{ column }}
         {% if kind == 'email' %}
