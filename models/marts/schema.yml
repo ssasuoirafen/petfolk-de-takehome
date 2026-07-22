@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: fct_visits
+    description: >
+      One row per completed visit (status = Completed). Grain: appointment_id.
+      Includes six visits whose client is absent from the clients export
+      (client_id NULL, is_unknown_client = true): the revenue is real and the
+      metric is location-based, so dropping them would understate revenue.
+      Null-status appointments are excluded.
+    columns:
+      - name: appointment_id
+        description: Visit grain, unique per completed visit.
+        tests: [unique, not_null]
+      - name: client_id
+        description: >
+          Canonical client id after duplicate resolution; NULL when the source
+          referenced a client missing from the export.
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_clients')
+                field: client_id
+      - name: location_id
+        description: Pet care center where the visit happened (metric dimension).
+        tests: [not_null]
+      - name: visit_month
+        description: Month of scheduled_at; the metric's time grain.
+        tests: [not_null]
+      - name: invoice_total
+        description: Invoiced amount in USD, cleaned from raw strings.
+        tests: [not_null]
+
+  - name: dim_clients
+    description: >
+      One row per real person (144 after merging 6 duplicate id pairs on
+      normalized email). email/phone are dynamically masked; set the session
+      variable pii_role to the unmask role to see real values. Hashes are the
+      stable identity keys.
+    columns:
+      - name: client_id
+        tests: [unique, not_null]
+      - name: n_source_ids
+        description: How many raw client_ids merged into this person.
