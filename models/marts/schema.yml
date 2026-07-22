@@ -21,9 +21,21 @@ models:
               arguments:
                 to: ref('dim_clients')
                 field: client_id
+      - name: is_unknown_client
+        description: True when the source client_id has no row in the clients export.
+      - name: patient_id
+        description: Pet that attended the visit.
+      - name: species
+        description: Pet species, denormalized from patients for convenience.
       - name: location_id
         description: Pet care center where the visit happened (metric dimension).
         tests: [not_null]
+      - name: provider_id
+        description: Provider who delivered the visit.
+      - name: appointment_type
+        description: Visit type (Wellness, Dental, Vaccination, ...).
+      - name: scheduled_at
+        description: Visit timestamp, parsed from four raw formats in staging.
       - name: visit_month
         description: Month of scheduled_at; the metric's time grain.
         tests: [not_null]
@@ -39,6 +51,23 @@ models:
       stable identity keys.
     columns:
       - name: client_id
+        description: Canonical client id (lowest id in each duplicate cluster).
         tests: [unique, not_null]
+      - name: first_name
+        description: Client first name.
+      - name: last_name
+        description: Client last name.
+      - name: email
+        description: Dynamically masked email; real value only with the unmask role.
+      - name: phone
+        description: Dynamically masked phone; real value only with the unmask role.
+      - name: email_hash
+        description: sha256 of normalized (lowercased, trimmed) email; stable identity key.
+      - name: phone_hash
+        description: sha256 of normalized (last-10-digits) phone; stable identity key.
+      - name: location_id
+        description: Home pet care center of the client.
+      - name: created_at
+        description: Client record creation timestamp.
       - name: n_source_ids
         description: How many raw client_ids merged into this person.
