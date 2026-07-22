@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: metric_revenue_per_visit
+    description: >
+      Revenue per completed visit by pet care center and month. Grain:
+      (location_id, visit_month). revenue = sum of cleaned invoice totals of
+      completed visits; visits = count of completed visits; revenue_per_visit =
+      revenue / visits. Months with zero completed visits have no row.
+      Source of truth for BI and downstream consumers.
+    columns:
+      - name: location_id
+        description: Pet care center (metric dimension).
+        tests: [not_null]
+      - name: visit_month
+        description: Calendar month of the visits (metric time grain).
+        tests: [not_null]
+      - name: visits
+        description: Completed visits in the location-month.
+      - name: revenue
+        description: Total invoiced USD for the location-month.
+      - name: revenue_per_visit
+        description: revenue / visits, rounded to cents.
+        tests: [not_null]
