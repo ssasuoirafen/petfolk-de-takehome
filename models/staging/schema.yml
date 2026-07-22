@@ -10,8 +10,9 @@ models:
         tests: [unique, not_null]
       - name: client_id
         description: >
-          Six Completed appointments reference client ids absent from the
+          Some Completed appointments reference client ids absent from the
           clients export; kept on purpose (revenue is real), hence warn.
+          Counts in DECISIONS.md.
         tests:
           - not_null
           - relationships:
@@ -28,7 +29,7 @@ models:
                 to: ref('stg_patients')
                 field: patient_id
       - name: status
-        description: Null for 9 raw rows; nulls are preserved in staging.
+        description: Nulls are preserved in staging; count and handling in DECISIONS.md.
         tests:
           - accepted_values:
               arguments:

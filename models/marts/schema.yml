@@ -4,10 +4,10 @@ models:
   - name: fct_visits
     description: >
       One row per completed visit (status = Completed). Grain: appointment_id.
-      Includes six visits whose client is absent from the clients export
+      Includes visits whose client is absent from the clients export
       (client_id NULL, is_unknown_client = true): the revenue is real and the
-      metric is location-based, so dropping them would understate revenue.
-      Null-status appointments are excluded.
+      metric is location-based, so dropping them would understate revenue
+      (count in DECISIONS.md). Null-status appointments are excluded.
     columns:
       - name: appointment_id
         description: Visit grain, unique per completed visit.
@@ -45,8 +45,8 @@ models:
 
   - name: dim_clients
     description: >
-      One row per real person (144 after merging 6 duplicate id pairs on
-      normalized email). email/phone are dynamically masked; set the session
+      One row per real person after merging duplicate client ids on normalized
+      email (counts in DECISIONS.md). email/phone are dynamically masked; set the session
       variable pii_role to the unmask role to see real values. Hashes are the
       stable identity keys.
     columns:
