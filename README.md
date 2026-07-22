@@ -116,3 +116,13 @@ A nested export of customer conversations. Each conversation holds a list of con
 ## What to submit
 
 A git repo or zip with your models, `ingest_gladly.py`, `DECISIONS.md`, and a short note on how to run anything beyond the standard steps. We will clone it, run your Python step, run `dbt seed` and `dbt build`, and expect green.
+
+## Candidate notes
+
+- Before the standard steps, generate the fourth seed: `python ingest_gladly.py`
+  (stdlib only, no extra dependencies; rerun-safe). Then `dbt seed` / `dbt build`
+  as above.
+- PII (email, phone, customer_phone) is masked by default in all modeled layers.
+  To see real values in a DuckDB session:
+  `SET VARIABLE pii_role = 'unmask_pii_data';`
+- Rationale for every data decision: `DECISIONS.md`.
