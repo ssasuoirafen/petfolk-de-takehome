@@ -2,21 +2,21 @@
 -- canonical. Six Completed appointments reference clients missing from the
 -- export: client_id becomes NULL (flagged), the visit and its revenue stay.
 select
-    a.appointment_id,
-    m.canonical_client_id as client_id,
-    a.client_id as source_client_id,
-    m.canonical_client_id is null as is_unknown_client,
-    a.patient_id,
-    p.species,
-    a.location_id,
-    a.appointment_type,
-    a.scheduled_at,
-    a.status,
-    a.provider_id,
-    a.invoice_total,
-    a.created_at
-from {{ ref('stg_appointments') }} as a
-left join {{ ref('int_client_id_map') }} as m
-    on a.client_id = m.client_id
-left join {{ ref('stg_patients') }} as p
-    on a.patient_id = p.patient_id
+    appointments.appointment_id,
+    id_map.canonical_client_id as client_id,
+    appointments.client_id as source_client_id,
+    id_map.canonical_client_id is null as is_unknown_client,
+    appointments.patient_id,
+    patients.species,
+    appointments.location_id,
+    appointments.appointment_type,
+    appointments.scheduled_at,
+    appointments.status,
+    appointments.provider_id,
+    appointments.invoice_total,
+    appointments.created_at
+from {{ ref('stg_appointments') }} as appointments
+left join {{ ref('int_client_id_map') }} as id_map
+    on appointments.client_id = id_map.client_id
+left join {{ ref('stg_patients') }} as patients
+    on appointments.patient_id = patients.patient_id

@@ -8,5 +8,6 @@ metric as (
 )
 
 select fct.total_revenue as fct_revenue, metric.total_revenue as metric_revenue
-from fct, metric
+from fct
+cross join metric
 where fct.total_revenue <> metric.total_revenue

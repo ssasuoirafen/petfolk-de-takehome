@@ -6,16 +6,16 @@ with map as (
 )
 
 select
-    c.client_id,
-    c.first_name,
-    c.last_name,
-    c.email,
-    c.phone,
-    c.email_hash,
-    c.phone_hash,
-    c.location_id,
-    c.created_at,
+    clients.client_id,
+    clients.first_name,
+    clients.last_name,
+    clients.email,
+    clients.phone,
+    clients.email_hash,
+    clients.phone_hash,
+    clients.location_id,
+    clients.created_at,
     map.n_source_ids
-from {{ ref('stg_clients') }} as c
+from {{ ref('stg_clients') }} as clients
 inner join map
-    on c.client_id = map.canonical_client_id
+    on clients.client_id = map.canonical_client_id
