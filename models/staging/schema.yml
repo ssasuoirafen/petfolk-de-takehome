@@ -15,21 +15,24 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('stg_clients')
-              field: client_id
+              arguments:
+                to: ref('stg_clients')
+                field: client_id
               config:
                 severity: warn
       - name: patient_id
         tests:
           - not_null
           - relationships:
-              to: ref('stg_patients')
-              field: patient_id
+              arguments:
+                to: ref('stg_patients')
+                field: patient_id
       - name: status
         description: Null for 9 raw rows; nulls are preserved in staging.
         tests:
           - accepted_values:
-              values: ['Completed', 'Scheduled', 'Cancelled', 'NoShow']
+              arguments:
+                values: ['Completed', 'Scheduled', 'Cancelled', 'NoShow']
       - name: scheduled_at
         tests: [not_null]
 
@@ -51,8 +54,9 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('stg_clients')
-              field: client_id
+              arguments:
+                to: ref('stg_clients')
+                field: client_id
 
   - name: stg_gladly_calls
     description: One row per PHONE_CALL contact from the Gladly export.

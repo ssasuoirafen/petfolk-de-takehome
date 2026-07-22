@@ -8,7 +8,11 @@
         when getvariable('pii_role') = '{{ var("pii_unmask_role", "unmask_pii_data") }}'
             then {{ column }}
         {% if kind == 'email' %}
-        else regexp_replace({{ column }}, '^(.).*@', '\1***@')
+        -- regexp_replace returns its input unchanged on no match, which would
+        -- leak a malformed (no-@) value through the masked branch: guard it.
+        when {{ column }} like '%@%'
+            then regexp_replace({{ column }}, '^(.).*@', '\1***@')
+        else '***'
         {% else %}
         else '*******' || right({{ column }}, 4)
         {% endif %}
