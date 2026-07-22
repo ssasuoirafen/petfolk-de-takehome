@@ -22,3 +22,17 @@ models:
       - name: revenue_per_visit
         description: revenue / visits, rounded to cents.
         tests: [not_null]
+
+exposures:
+  - name: bi_revenue_per_visit
+    label: Revenue per Visit (BI)
+    type: dashboard
+    maturity: low
+    description: >
+      Declared consumption point of the governed metric: the BI object that
+      reads metric_revenue_per_visit. In the DAG so downstream impact of model
+      changes stays visible.
+    depends_on:
+      - ref('metric_revenue_per_visit')
+    owner:
+      name: Petfolk Data Team

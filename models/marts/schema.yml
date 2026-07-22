@@ -59,12 +59,24 @@ models:
         description: Client last name.
       - name: email
         description: Dynamically masked email; real value only with the unmask role.
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
       - name: phone
         description: Dynamically masked phone; real value only with the unmask role.
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
       - name: email_hash
-        description: sha256 of normalized (lowercased, trimmed) email; stable identity key.
+        description: sha256 of normalized (lowercased, trimmed) email; stable identity key (pseudonymized PII).
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
       - name: phone_hash
-        description: sha256 of normalized (last-10-digits) phone; stable identity key.
+        description: sha256 of normalized (last-10-digits) phone; stable identity key (pseudonymized PII).
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
       - name: location_id
         description: Home pet care center of the client.
       - name: created_at

@@ -44,10 +44,32 @@ models:
     columns:
       - name: client_id
         tests: [unique, not_null]
+      - name: email
+        description: Dynamically masked email; the raw value never leaves the seed.
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
+      - name: phone
+        description: Dynamically masked phone.
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
       - name: email_hash
+        description: sha256 of normalized email; dedup/join key (pseudonymized PII).
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
         tests: [not_null]
+      - name: phone_hash
+        description: sha256 of normalized phone; identity cross-check key (pseudonymized PII).
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
 
   - name: stg_patients
+    description: >
+      Patients 1:1 with raw, typed. Weight outliers kept and flagged by a warn
+      test; nulls preserved.
     columns:
       - name: patient_id
         tests: [unique, not_null]
@@ -64,6 +86,16 @@ models:
     columns:
       - name: contact_id
         tests: [unique, not_null]
+      - name: customer_phone
+        description: Dynamically masked pet-parent phone.
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
+      - name: customer_phone_hash
+        description: sha256 of normalized phone (pseudonymized PII).
+        config:
+          meta: {contains_pii: true}
+          tags: [pii]
       - name: conversation_id
         tests: [not_null]
       - name: started_at
