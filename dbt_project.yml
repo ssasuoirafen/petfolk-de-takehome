@@ -17,6 +17,16 @@ clean-targets:
 models:
   petfolk_takehome:
     +materialized: view
+    staging:
+      +schema: staging
+    intermediate:
+      +schema: intermediate
+    marts:
+      +schema: marts
+      +materialized: table
+    semantic:
+      +schema: semantic
+      +materialized: table
 
 # Raw seeds are loaded as all-VARCHAR on purpose, to mimic an untyped raw landing.
 # All casting and cleanup is your job in the staging layer.

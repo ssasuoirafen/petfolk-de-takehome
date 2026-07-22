@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_appointments
+    description: >
+      Appointments typed and cleaned, 1:1 with the raw export minus exact
+      duplicate rows. scheduled_at parsed from four source formats.
+    columns:
+      - name: appointment_id
+        tests: [unique, not_null]
+      - name: client_id
+        description: >
+          Six Completed appointments reference client ids absent from the
+          clients export; kept on purpose (revenue is real), hence warn.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_clients')
+              field: client_id
+              config:
+                severity: warn
+      - name: patient_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_patients')
+              field: patient_id
+      - name: status
+        description: Null for 9 raw rows; nulls are preserved in staging.
+        tests:
+          - accepted_values:
+              values: ['Completed', 'Scheduled', 'Cancelled', 'NoShow']
+      - name: scheduled_at
+        tests: [not_null]
+
+  - name: stg_clients
+    description: >
+      Clients 1:1 with raw. email/phone are dynamically masked; email_hash and
+      phone_hash (sha256 of normalized values) are the join/dedup keys.
+    columns:
+      - name: client_id
+        tests: [unique, not_null]
+      - name: email_hash
+        tests: [not_null]
+
+  - name: stg_patients
+    columns:
+      - name: patient_id
+        tests: [unique, not_null]
+      - name: client_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_clients')
+              field: client_id
+
+  - name: stg_gladly_calls
+    description: One row per PHONE_CALL contact from the Gladly export.
+    columns:
+      - name: contact_id
+        tests: [unique, not_null]
+      - name: conversation_id
+        tests: [not_null]
+      - name: started_at
+        tests: [not_null]
