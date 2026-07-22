@@ -42,9 +42,16 @@ def main() -> None:
     if not isinstance(conversations, list):
         fail("payload has no 'conversations' list")
 
-    page = payload.get("pagination", {})
+    page = payload.get("pagination") or {}
+    if not isinstance(page, dict):
+        fail(f"'pagination' is not an object: {page!r}")
     total = page.get("total", len(conversations))
-    if total > page.get("page", 1) * page.get("page_size", total):
+    page_no = page.get("page", 1)
+    page_size = page.get("page_size", total)
+    for name, value in (("total", total), ("page", page_no), ("page_size", page_size)):
+        if not isinstance(value, int) or isinstance(value, bool):
+            fail(f"pagination.{name} is not an integer: {value!r}")
+    if total > page_no * page_size:
         fail(
             f"export is paginated (total={total} > this page); "
             "refusing to write a partial extract"
