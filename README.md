@@ -16,6 +16,8 @@ This runs entirely locally on `dbt-duckdb`. No cloud account, no cost.
 
 The dbt profile is bundled in `profiles.yml`, so pass `--profiles-dir .` on every dbt command. A local `petfolk.duckdb` file is created in the project root. Out of the box the three seeds load and `dbt build` runs green. You add models from there.
 
+**Candidate note:** this submission adds a fourth seed. Run `python ingest_gladly.py` once before `dbt seed` (details in the Candidate notes section at the bottom).
+
 ## What's in the repo
 
 ```
