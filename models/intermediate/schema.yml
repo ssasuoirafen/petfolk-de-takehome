@@ -14,6 +14,9 @@ models:
     columns:
       - name: client_id
         tests: [unique, not_null]
+      - name: email_hash
+        description: One person per normalized email - the invariant the dedup creates.
+        tests: [unique, not_null]
 
   - name: int_visits
     description: >
