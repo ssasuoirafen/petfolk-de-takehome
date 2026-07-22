@@ -1,0 +1,8 @@
+# Bundled so the project is self-contained. Run dbt with: --profiles-dir .
+petfolk_takehome:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: petfolk.duckdb
+      threads: 4

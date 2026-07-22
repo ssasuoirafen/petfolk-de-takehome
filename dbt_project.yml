@@ -1,0 +1,34 @@
+name: 'petfolk_takehome'
+version: '1.0.0'
+config-version: 2
+profile: 'petfolk_takehome'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Build your layers under models/. Suggested structure is already scaffolded:
+# staging (bronze) -> intermediate (silver) -> marts (gold) -> semantic (metrics)
+models:
+  petfolk_takehome:
+    +materialized: view
+
+# Raw seeds are loaded as all-VARCHAR on purpose, to mimic an untyped raw landing.
+# All casting and cleanup is your job in the staging layer.
+seeds:
+  petfolk_takehome:
+    +quote_columns: false
+    appointments_raw:
+      +column_types: {appointment_id: varchar, patient_id: varchar, client_id: varchar, location_id: varchar, appointment_type: varchar, scheduled_at: varchar, status: varchar, provider_id: varchar, invoice_total: varchar, created_at: varchar}
+    clients_raw:
+      +column_types: {client_id: varchar, first_name: varchar, last_name: varchar, email: varchar, phone: varchar, location_id: varchar, created_at: varchar}
+    patients_raw:
+      +column_types: {patient_id: varchar, client_id: varchar, species: varchar, breed: varchar, date_of_birth: varchar, sex: varchar, weight_kg: varchar}
+    # produced by your Python step; preconfigured so it also lands as raw text
+    gladly_calls:
+      +column_types: {conversation_id: varchar, contact_id: varchar, customer_phone: varchar, agent_id: varchar, started_at: varchar, duration_seconds: varchar}

@@ -1,0 +1,16 @@
+# dbt
+target/
+dbt_packages/
+logs/
+# local warehouse
+*.duckdb
+*.duckdb.wal
+# python
+.venv/
+__pycache__/
+*.pyc
+# candidate output (regenerate by running ingest_gladly.py)
+seeds/gladly_calls.csv
+
+# dbt anonymous usage id
+.user.yml

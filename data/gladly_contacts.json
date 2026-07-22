@@ -1,0 +1,1065 @@
+{
+  "pagination": {
+    "page": 1,
+    "page_size": 100,
+    "total": 40
+  },
+  "conversations": [
+    {
+      "conversation_id": "conv_0001",
+      "customer": {
+        "id": "cust_0001",
+        "phone": "+16999822792"
+      },
+      "items": [
+        {
+          "contact_id": "item_00001",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-12-16T15:45:00Z"
+        },
+        {
+          "contact_id": "item_00002",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-03-21T15:00:00Z"
+        },
+        {
+          "contact_id": "item_00003",
+          "type": "PHONE_CALL",
+          "started_at": "2024-09-10T16:45:00Z",
+          "agent_id": "agent_06",
+          "duration_seconds": 602
+        },
+        {
+          "contact_id": "item_00004",
+          "type": "PHONE_CALL",
+          "started_at": "2024-01-15T16:00:00Z",
+          "agent_id": "agent_03",
+          "duration_seconds": 734
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0002",
+      "customer": {
+        "id": "cust_0002",
+        "phone": "+19597971440"
+      },
+      "items": [
+        {
+          "contact_id": "item_00005",
+          "type": "PHONE_CALL",
+          "started_at": "2024-08-07T12:30:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 1374
+        },
+        {
+          "contact_id": "item_00006",
+          "type": "PHONE_CALL",
+          "started_at": "2024-04-30T17:30:00Z",
+          "agent_id": "agent_02",
+          "duration_seconds": 154
+        },
+        {
+          "contact_id": "item_00007",
+          "type": "EMAIL",
+          "created_at": "2024-02-28T12:15:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0003",
+      "customer": {
+        "id": "cust_0003",
+        "phone": "+12207516343"
+      },
+      "items": [
+        {
+          "contact_id": "item_00008",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-08-04T16:45:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0004",
+      "customer": {
+        "id": "cust_0004",
+        "phone": "+14732208695"
+      },
+      "items": [
+        {
+          "contact_id": "item_00009",
+          "type": "SMS",
+          "created_at": "2024-07-12T16:45:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0005",
+      "customer": {
+        "id": "cust_0005",
+        "phone": "+15307862601"
+      },
+      "items": [
+        {
+          "contact_id": "item_00010",
+          "type": "PHONE_CALL",
+          "started_at": "2024-12-11T10:30:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 1586
+        },
+        {
+          "contact_id": "item_00011",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-03-26T16:30:00Z"
+        },
+        {
+          "contact_id": "item_00012",
+          "type": "PHONE_CALL",
+          "started_at": "2024-08-11T10:45:00Z",
+          "agent_id": "agent_02",
+          "duration_seconds": 1117
+        },
+        {
+          "contact_id": "item_00013",
+          "type": "PHONE_CALL",
+          "started_at": "2024-05-15T07:30:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 1299
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0006",
+      "customer": {
+        "id": "cust_0006",
+        "phone": "+19602942552"
+      },
+      "items": [
+        {
+          "contact_id": "item_00014",
+          "type": "PHONE_CALL",
+          "started_at": "2024-10-17T19:45:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 1649
+        },
+        {
+          "contact_id": "item_00015",
+          "type": "PHONE_CALL",
+          "started_at": "2024-06-03T15:30:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 661
+        },
+        {
+          "contact_id": "item_00016",
+          "type": "PHONE_CALL",
+          "started_at": "2024-07-24T11:45:00Z",
+          "agent_id": "agent_03",
+          "duration_seconds": 1305
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0007",
+      "customer": {
+        "id": "cust_0007",
+        "phone": "+19207284056"
+      },
+      "items": [
+        {
+          "contact_id": "item_00017",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-15T14:30:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 1508
+        },
+        {
+          "contact_id": "item_00018",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-09-24T10:30:00Z"
+        },
+        {
+          "contact_id": "item_00019",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-05-03T09:30:00Z"
+        },
+        {
+          "contact_id": "item_00020",
+          "type": "EMAIL",
+          "created_at": "2024-07-29T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0008",
+      "customer": {
+        "id": "cust_0008",
+        "phone": "+18494087757"
+      },
+      "items": [
+        {
+          "contact_id": "item_00021",
+          "type": "EMAIL",
+          "created_at": "2024-11-26T09:30:00Z"
+        },
+        {
+          "contact_id": "item_00022",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-04-30T13:15:00Z"
+        },
+        {
+          "contact_id": "item_00023",
+          "type": "PHONE_CALL",
+          "started_at": "2024-04-08T07:15:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 1166
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0009",
+      "customer": {
+        "id": "cust_0009",
+        "phone": "+16466321606"
+      },
+      "items": [
+        {
+          "contact_id": "item_00024",
+          "type": "PHONE_CALL",
+          "started_at": "2024-03-10T07:30:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 380
+        },
+        {
+          "contact_id": "item_00025",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-01-22T18:45:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0010",
+      "customer": {
+        "id": "cust_0010",
+        "phone": "+12202562375"
+      },
+      "items": [
+        {
+          "contact_id": "item_00026",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-02-02T13:30:00Z"
+        },
+        {
+          "contact_id": "item_00027",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-02-16T13:15:00Z"
+        },
+        {
+          "contact_id": "item_00028",
+          "type": "PHONE_CALL",
+          "started_at": "2024-10-19T18:00:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 204
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0011",
+      "customer": {
+        "id": "cust_0011",
+        "phone": "+14438143003"
+      },
+      "items": [
+        {
+          "contact_id": "item_00029",
+          "type": "PHONE_CALL",
+          "started_at": "2024-10-26T18:45:00Z",
+          "agent_id": "agent_04",
+          "duration_seconds": 466
+        },
+        {
+          "contact_id": "item_00030",
+          "type": "PHONE_CALL",
+          "started_at": "2024-03-30T10:30:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 1787
+        },
+        {
+          "contact_id": "item_00031",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-09-08T15:30:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0012",
+      "customer": {
+        "id": "cust_0012",
+        "phone": "+19163156185"
+      },
+      "items": [
+        {
+          "contact_id": "item_00032",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-05-06T11:15:00Z"
+        },
+        {
+          "contact_id": "item_00033",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-01T12:30:00Z",
+          "agent_id": "agent_01",
+          "duration_seconds": 1260
+        },
+        {
+          "contact_id": "item_00034",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-13T17:00:00Z",
+          "agent_id": "agent_04",
+          "duration_seconds": 807
+        },
+        {
+          "contact_id": "item_00035",
+          "type": "PHONE_CALL",
+          "started_at": "2024-12-24T12:00:00Z",
+          "agent_id": "agent_04",
+          "duration_seconds": 815
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0013",
+      "customer": {
+        "id": "cust_0013",
+        "phone": "+12086025186"
+      },
+      "items": [
+        {
+          "contact_id": "item_00036",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-22T10:30:00Z",
+          "agent_id": "agent_04",
+          "duration_seconds": 348
+        },
+        {
+          "contact_id": "item_00037",
+          "type": "SMS",
+          "created_at": "2024-11-19T12:45:00Z"
+        },
+        {
+          "contact_id": "item_00038",
+          "type": "EMAIL",
+          "created_at": "2024-05-20T08:45:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0014",
+      "customer": {
+        "id": "cust_0014",
+        "phone": "+16829547765"
+      },
+      "items": [
+        {
+          "contact_id": "item_00039",
+          "type": "EMAIL",
+          "created_at": "2025-02-23T08:15:00Z"
+        },
+        {
+          "contact_id": "item_00040",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-09-16T08:30:00Z"
+        },
+        {
+          "contact_id": "item_00041",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-08T15:30:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 1580
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0015",
+      "customer": {
+        "id": "cust_0015",
+        "phone": "+12538564010"
+      },
+      "items": [
+        {
+          "contact_id": "item_00042",
+          "type": "EMAIL",
+          "created_at": "2024-03-10T07:45:00Z"
+        },
+        {
+          "contact_id": "item_00043",
+          "type": "PHONE_CALL",
+          "started_at": "2024-06-05T12:00:00Z",
+          "agent_id": "agent_02",
+          "duration_seconds": 1077
+        },
+        {
+          "contact_id": "item_00044",
+          "type": "EMAIL",
+          "created_at": "2025-01-28T17:15:00Z"
+        },
+        {
+          "contact_id": "item_00045",
+          "type": "EMAIL",
+          "created_at": "2024-12-17T13:30:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0016",
+      "customer": {
+        "id": "cust_0016",
+        "phone": "+16626893187"
+      },
+      "items": [
+        {
+          "contact_id": "item_00046",
+          "type": "PHONE_CALL",
+          "started_at": "2024-10-30T12:30:00Z",
+          "agent_id": "agent_04"
+        },
+        {
+          "contact_id": "item_00047",
+          "type": "PHONE_CALL",
+          "started_at": "2024-07-20T13:15:00Z",
+          "agent_id": "agent_01",
+          "duration_seconds": 1163
+        },
+        {
+          "contact_id": "item_00048",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-11-16T10:00:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0017",
+      "customer": {
+        "id": "cust_0017",
+        "phone": "+16734035289"
+      },
+      "items": [
+        {
+          "contact_id": "item_00049",
+          "type": "PHONE_CALL",
+          "started_at": "2024-11-12T13:30:00Z",
+          "agent_id": "agent_03"
+        },
+        {
+          "contact_id": "item_00050",
+          "type": "PHONE_CALL",
+          "started_at": "2024-10-17T08:00:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 949
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0018",
+      "customer": {
+        "id": "cust_0018",
+        "phone": "+18897062941"
+      },
+      "items": [
+        {
+          "contact_id": "item_00051",
+          "type": "EMAIL",
+          "created_at": "2024-04-07T19:30:00Z"
+        },
+        {
+          "contact_id": "item_00052",
+          "type": "PHONE_CALL",
+          "started_at": "2024-09-10T13:15:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 1248
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0019",
+      "customer": {
+        "id": "cust_0019",
+        "phone": "+14204894102"
+      },
+      "items": [
+        {
+          "contact_id": "item_00053",
+          "type": "PHONE_CALL",
+          "started_at": "2025-02-09T09:00:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 502
+        },
+        {
+          "contact_id": "item_00054",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-05-07T12:45:00Z"
+        },
+        {
+          "contact_id": "item_00055",
+          "type": "PHONE_CALL",
+          "started_at": "2024-08-28T09:30:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 1480
+        },
+        {
+          "contact_id": "item_00056",
+          "type": "PHONE_CALL",
+          "started_at": "2024-08-04T18:30:00Z",
+          "agent_id": "agent_02"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0020",
+      "customer": {
+        "id": "cust_0020",
+        "phone": "+12602536453"
+      },
+      "items": [
+        {
+          "contact_id": "item_00057",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-06-30T16:00:00Z"
+        },
+        {
+          "contact_id": "item_00058",
+          "type": "PHONE_CALL",
+          "started_at": "2024-09-15T16:45:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 1394
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0021",
+      "customer": {
+        "id": "cust_0021",
+        "phone": "+15793351673"
+      },
+      "items": [
+        {
+          "contact_id": "item_00059",
+          "type": "PHONE_CALL",
+          "started_at": "2024-09-14T14:30:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 669
+        },
+        {
+          "contact_id": "item_00060",
+          "type": "EMAIL",
+          "created_at": "2024-08-09T09:30:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0022",
+      "customer": {
+        "id": "cust_0022",
+        "phone": "+13195201723"
+      },
+      "items": [
+        {
+          "contact_id": "item_00061",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-05-23T18:30:00Z"
+        },
+        {
+          "contact_id": "item_00062",
+          "type": "SMS",
+          "created_at": "2024-05-24T11:30:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0023",
+      "customer": {
+        "id": "cust_0023",
+        "phone": "+17295208139"
+      },
+      "items": [
+        {
+          "contact_id": "item_00063",
+          "type": "PHONE_CALL",
+          "started_at": "2024-09-08T19:15:00Z",
+          "agent_id": "agent_08"
+        },
+        {
+          "contact_id": "item_00064",
+          "type": "PHONE_CALL",
+          "started_at": "2024-04-27T09:00:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 1465
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0024",
+      "customer": {
+        "id": "cust_0024",
+        "phone": "+16786462900"
+      },
+      "items": [
+        {
+          "contact_id": "item_00065",
+          "type": "PHONE_CALL",
+          "started_at": "2024-07-01T18:45:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 1752
+        },
+        {
+          "contact_id": "item_00066",
+          "type": "EMAIL",
+          "created_at": "2024-03-16T08:30:00Z"
+        },
+        {
+          "contact_id": "item_00067",
+          "type": "PHONE_CALL",
+          "started_at": "2024-05-25T09:15:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 1378
+        },
+        {
+          "contact_id": "item_00068",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-10-25T07:15:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0025",
+      "customer": {
+        "id": "cust_0025",
+        "phone": "+16262785033"
+      },
+      "items": [
+        {
+          "contact_id": "item_00069",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-06-17T07:30:00Z"
+        },
+        {
+          "contact_id": "item_00070",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-12-14T08:45:00Z"
+        },
+        {
+          "contact_id": "item_00071",
+          "type": "PHONE_CALL",
+          "started_at": "2024-02-24T12:15:00Z",
+          "agent_id": "agent_01"
+        },
+        {
+          "contact_id": "item_00072",
+          "type": "EMAIL",
+          "created_at": "2024-12-03T14:45:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0026",
+      "customer": {
+        "id": "cust_0026",
+        "phone": "+18434751095"
+      },
+      "items": [
+        {
+          "contact_id": "item_00073",
+          "type": "SMS",
+          "created_at": "2024-12-01T16:45:00Z"
+        },
+        {
+          "contact_id": "item_00074",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-09T18:15:00Z",
+          "agent_id": "agent_04",
+          "duration_seconds": 1661
+        },
+        {
+          "contact_id": "item_00075",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-06-14T19:00:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0027",
+      "customer": {
+        "id": "cust_0027",
+        "phone": "+19612729964"
+      },
+      "items": [
+        {
+          "contact_id": "item_00076",
+          "type": "PHONE_CALL",
+          "started_at": "2024-05-10T09:15:00Z",
+          "agent_id": "agent_07"
+        },
+        {
+          "contact_id": "item_00077",
+          "type": "EMAIL",
+          "created_at": "2024-03-24T13:45:00Z"
+        },
+        {
+          "contact_id": "item_00078",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-20T17:15:00Z",
+          "agent_id": "agent_02",
+          "duration_seconds": 1660
+        },
+        {
+          "contact_id": "item_00079",
+          "type": "PHONE_CALL",
+          "started_at": "2025-02-16T11:15:00Z",
+          "agent_id": "agent_06",
+          "duration_seconds": 1724
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0028",
+      "customer": {
+        "id": "cust_0028",
+        "phone": "+15767244274"
+      },
+      "items": [
+        {
+          "contact_id": "item_00080",
+          "type": "PHONE_CALL",
+          "started_at": "2024-07-17T14:30:00Z",
+          "agent_id": "agent_07"
+        },
+        {
+          "contact_id": "item_00081",
+          "type": "PHONE_CALL",
+          "started_at": "2024-07-07T16:15:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 210
+        },
+        {
+          "contact_id": "item_00082",
+          "type": "PHONE_CALL",
+          "started_at": "2024-06-23T14:15:00Z",
+          "agent_id": "agent_03",
+          "duration_seconds": 1099
+        },
+        {
+          "contact_id": "item_00083",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-09-25T08:30:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0029",
+      "customer": {
+        "id": "cust_0029",
+        "phone": "+16796472297"
+      },
+      "items": [
+        {
+          "contact_id": "item_00084",
+          "type": "PHONE_CALL",
+          "started_at": "2024-03-06T17:30:00Z",
+          "agent_id": "agent_04",
+          "duration_seconds": 625
+        },
+        {
+          "contact_id": "item_00085",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-10-09T08:00:00Z"
+        },
+        {
+          "contact_id": "item_00086",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-09-18T13:45:00Z"
+        },
+        {
+          "contact_id": "item_00087",
+          "type": "PHONE_CALL",
+          "started_at": "2024-12-04T18:30:00Z",
+          "agent_id": "agent_06",
+          "duration_seconds": 187
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0030",
+      "customer": {
+        "id": "cust_0030",
+        "phone": "+19877151266"
+      },
+      "items": [
+        {
+          "contact_id": "item_00088",
+          "type": "EMAIL",
+          "created_at": "2024-08-24T09:15:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0031",
+      "customer": {
+        "id": "cust_0031",
+        "phone": "+16022462364"
+      },
+      "items": [
+        {
+          "contact_id": "item_00089",
+          "type": "EMAIL",
+          "created_at": "2024-06-01T12:45:00Z"
+        },
+        {
+          "contact_id": "item_00090",
+          "type": "EMAIL",
+          "created_at": "2024-08-18T16:30:00Z"
+        },
+        {
+          "contact_id": "item_00091",
+          "type": "PHONE_CALL",
+          "started_at": "2025-02-18T09:15:00Z",
+          "agent_id": "agent_03"
+        },
+        {
+          "contact_id": "item_00092",
+          "type": "SMS",
+          "created_at": "2024-05-12T17:00:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0032",
+      "customer": {
+        "id": "cust_0032",
+        "phone": "+16447471293"
+      },
+      "items": [
+        {
+          "contact_id": "item_00093",
+          "type": "PHONE_CALL",
+          "started_at": "2024-01-07T09:45:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 1799
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0033",
+      "customer": {
+        "id": "cust_0033",
+        "phone": "+18739628974"
+      },
+      "items": [
+        {
+          "contact_id": "item_00094",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-11-11T12:45:00Z"
+        },
+        {
+          "contact_id": "item_00095",
+          "type": "EMAIL",
+          "created_at": "2024-02-14T09:15:00Z"
+        },
+        {
+          "contact_id": "item_00096",
+          "type": "PHONE_CALL",
+          "started_at": "2024-02-27T07:15:00Z",
+          "agent_id": "agent_01",
+          "duration_seconds": 1348
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0034",
+      "customer": {
+        "id": "cust_0034",
+        "phone": "+13488654961"
+      },
+      "items": [
+        {
+          "contact_id": "item_00097",
+          "type": "EMAIL",
+          "created_at": "2025-02-08T15:15:00Z"
+        },
+        {
+          "contact_id": "item_00098",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-29T14:15:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 258
+        },
+        {
+          "contact_id": "item_00099",
+          "type": "PHONE_CALL",
+          "started_at": "2024-03-19T18:45:00Z",
+          "agent_id": "agent_08",
+          "duration_seconds": 1780
+        },
+        {
+          "contact_id": "item_00100",
+          "type": "PHONE_CALL",
+          "started_at": "2024-05-04T10:30:00Z",
+          "agent_id": "agent_07"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0035",
+      "customer": {
+        "id": "cust_0035",
+        "phone": "+12083058074"
+      },
+      "items": [
+        {
+          "contact_id": "item_00101",
+          "type": "EMAIL",
+          "created_at": "2025-01-12T16:30:00Z"
+        },
+        {
+          "contact_id": "item_00102",
+          "type": "PHONE_CALL",
+          "started_at": "2024-07-23T14:45:00Z",
+          "agent_id": "agent_04",
+          "duration_seconds": 1101
+        },
+        {
+          "contact_id": "item_00103",
+          "type": "PHONE_CALL",
+          "started_at": "2024-10-22T12:00:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 874
+        },
+        {
+          "contact_id": "item_00104",
+          "type": "EMAIL",
+          "created_at": "2024-02-29T14:30:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0036",
+      "customer": {
+        "id": "cust_0036",
+        "phone": "+16599148147"
+      },
+      "items": [
+        {
+          "contact_id": "item_00105",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-06T10:45:00Z",
+          "agent_id": "agent_06",
+          "duration_seconds": 1059
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0037",
+      "customer": {
+        "id": "cust_0037",
+        "phone": "+14248016556"
+      },
+      "items": [
+        {
+          "contact_id": "item_00106",
+          "type": "PHONE_CALL",
+          "started_at": "2024-05-30T18:45:00Z",
+          "agent_id": "agent_07",
+          "duration_seconds": 1398
+        },
+        {
+          "contact_id": "item_00107",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-07-03T19:45:00Z"
+        },
+        {
+          "contact_id": "item_00108",
+          "type": "EMAIL",
+          "created_at": "2024-03-23T16:15:00Z"
+        },
+        {
+          "contact_id": "item_00109",
+          "type": "PHONE_CALL",
+          "started_at": "2025-01-18T08:45:00Z",
+          "agent_id": "agent_03",
+          "duration_seconds": 340
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0038",
+      "customer": {
+        "id": "cust_0038",
+        "phone": "+18207032653"
+      },
+      "items": [
+        {
+          "contact_id": "item_00110",
+          "type": "SMS",
+          "created_at": "2024-09-09T11:15:00Z"
+        },
+        {
+          "contact_id": "item_00111",
+          "type": "PHONE_CALL",
+          "started_at": "2024-01-25T07:30:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 344
+        },
+        {
+          "contact_id": "item_00112",
+          "type": "PHONE_CALL",
+          "started_at": "2024-09-14T07:00:00Z",
+          "agent_id": "agent_06",
+          "duration_seconds": 1284
+        },
+        {
+          "contact_id": "item_00113",
+          "type": "PHONE_CALL",
+          "started_at": "2024-10-14T10:45:00Z",
+          "agent_id": "agent_05",
+          "duration_seconds": 1627
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0039",
+      "customer": {
+        "id": "cust_0039",
+        "phone": "+15639871764"
+      },
+      "items": [
+        {
+          "contact_id": "item_00114",
+          "type": "EMAIL",
+          "created_at": "2024-12-19T15:00:00Z"
+        },
+        {
+          "contact_id": "item_00115",
+          "type": "EMAIL",
+          "created_at": "2024-08-12T19:45:00Z"
+        },
+        {
+          "contact_id": "item_00116",
+          "type": "SMS",
+          "created_at": "2025-01-21T08:00:00Z"
+        }
+      ]
+    },
+    {
+      "conversation_id": "conv_0040",
+      "customer": {
+        "id": "cust_0040",
+        "phone": "+18258242669"
+      },
+      "items": [
+        {
+          "contact_id": "item_00117",
+          "type": "CHAT_MESSAGE",
+          "created_at": "2024-03-26T17:00:00Z"
+        }
+      ]
+    }
+  ]
+}
