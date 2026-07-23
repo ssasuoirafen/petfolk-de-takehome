@@ -29,3 +29,13 @@
 - Orchestration: Airflow (or dbt Cloud jobs) running ingest -> seed/source freshness -> build -> test with alerting; environments (dev/CI/prod) with CI running slim builds (state:modified+) on PRs.
 - Testing/governance: source freshness checks, contracts on gold models, unit tests for the parsing macro, data quality monitoring (e.g. elementary), and column-level lineage so PII tags propagate.
 - Incremental models for fact tables once volume warrants it; seeds replaced by real sources.
+
+## AI assistance disclosure
+
+Per the constraints note ("AI tools are fine"), this submission was built with substantial AI assistance (Claude Code): a reviewed implementation plan, per-task briefs executed and verified task-by-task with green builds at every step, then independent review passes (whole-branch code review, a dbt best-practices audit) whose findings I triaged - most applied, some rejected with data (see the species-bounds note in trade-offs). The process artifacts are committed for transparency:
+
+- `CLAUDE.md` - the project instructions the assistant worked under (grader-path constraints, PII invariants).
+- `.local/docs/plans/2026-07-22-petfolk-medallion.md` - the implementation plan.
+- `.superpowers/sdd/task-*-brief.md` / `task-*-report.md` - per-task execution briefs and verification reports, committed unedited. They were local working files, not written for graders, so they read as raw process logs; committed retroactively once I opted for full disclosure.
+
+Every decision and number in this document is mine to defend: re-derivable from the data and explainable line by line, per the follow-up-conversation bar the README sets.
