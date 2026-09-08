@@ -5,7 +5,7 @@ Senior-DE take-home submission (dbt-duckdb medallion + Python ingestion). The gi
 ## Hard rules
 
 - AI use is publicly disclosed (2026-07-23): DECISIONS.md carries the disclosure section; this file, the plan (`.local/docs/plans/2026-07-22-petfolk-medallion.md`), and `.superpowers/sdd/task-*-{brief,report}.md` are tracked on purpose. Do not "re-hide" them.
-- Still never commit: the rest of `.local/` (esp. `docs/handoff.md` - interview prep stays private - and `bin/`), the rest of `.superpowers/` (progress.md, review diffs), `.claude/`, `petfolk.duckdb*`, `seeds/gladly_calls.csv` (graders regenerate it). Local-only paths live in `.git/info/exclude`, not the committed `.gitignore`.
+- Still never commit: the rest of `.local/` (esp. `docs/handoff.md` - interview prep stays private - and `bin/`), the rest of `.superpowers/` (progress.md, review diffs), `.claude/`, `petfolk.duckdb*`, `seeds/gladly_calls.csv` (graders regenerate it). The committed `.gitignore` is the only safety net (`.git/info/exclude` is empty), and it covers just `.local/`, `petfolk.duckdb*`, `seeds/gladly_calls.csv`, `.claude/memory/`, `.claude/settings.local.json`, `.mcp.json`, `CLAUDE.local.md`; the tracked plan under `.local/docs/plans/` survives that because `.gitignore` never untracks what is already in the index. The rest of `.claude/` (a new `settings.json`, skills) and all of `.superpowers/` are not ignored and surface as untracked - stage by path, never `git add -A`.
 - Committed artifacts must work through the graders' pip path: `requirements.txt` is the interface - no pyproject/uv.lock, no new Python deps, `ingest_gladly.py` stays stdlib-only (bare Python 3.10-3.13).
 - No dbt packages (`packages.yml`): graders run only seed/build, never `dbt deps`.
 
