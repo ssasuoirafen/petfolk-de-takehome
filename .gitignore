@@ -1,16 +1,35 @@
-# dbt
-target/
-dbt_packages/
-logs/
-# local warehouse
-*.duckdb
-*.duckdb.wal
-# python
+# Environment
+.env*
+*.session
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+*.egg-info/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
 .venv/
 __pycache__/
-*.pyc
-# candidate output (regenerate by running ingest_gladly.py)
+build/
+dist/
+
+# Working artifacts
+*.duckdb
+*.duckdb.wal
+.local/
 seeds/gladly_calls.csv
 
-# dbt anonymous usage id
+# AI tooling
+.claude/memory/
+.claude/settings.local.json
+.mcp.json
+CLAUDE.local.md
+
+# dbt
+dbt_packages/
+logs/
+target/
 .user.yml
