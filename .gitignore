@@ -24,6 +24,7 @@ seeds/gladly_calls.csv
 
 # AI tooling
 .claude/memory/
+.claude/worktrees/
 .claude/settings.local.json
 .mcp.json
 CLAUDE.local.md
