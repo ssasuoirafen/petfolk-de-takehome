@@ -23,10 +23,10 @@ dist/
 seeds/gladly_calls.csv
 
 # AI tooling
-.claude/memory/
 .claude/worktrees/
 .claude/settings.local.json
 .mcp.json
+AGENTS.override.md
 CLAUDE.local.md
 
 # dbt
