@@ -31,4 +31,4 @@ Senior-DE take-home submission (dbt-duckdb medallion + Python ingestion). The gi
 
 ## Submission
 
-Submitted: public at https://github.com/ssasuoirafen/petfolk-de-takehome (`gh auth switch ssasuoirafen` before pushing). Never zip/push the working folder wholesale - untracked local artifacts would leak. Open items and interview-prep pointers: `.local/docs/handoff.md` (local-only).
+Submitted: public at https://github.com/ssasuoirafen/petfolk-de-takehome (`gh auth switch --user ssasuoirafen` before pushing). Never zip/push the working folder wholesale - untracked local artifacts would leak. Open items and interview-prep pointers: `.local/docs/handoff.md` (local-only).
