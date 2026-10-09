@@ -13,7 +13,7 @@ Senior-DE take-home submission (dbt-duckdb medallion + Python ingestion). The gi
 
 - Python via uv only: `uv run --python 3.12 --with-requirements requirements.txt dbt <cmd> --profiles-dir .`
 - dbt always from repo root with `--profiles-dir .` (bundled profile, relative duckdb path).
-- DB browsing: `~/.local/bin/duckdb-1.5.4 -ui -cmd "attach 'petfolk.duckdb' as petfolk (read_only);"` - pinned macOS CLI kept outside the repo because brew's 1.5.5 has no published `ui` extension yet (delete the binary once `INSTALL ui` works there). A globally `-readonly` session breaks the UI's state catalog. Any open UI/CLI session holds a lock on the db - close it before `dbt build`.
+- DB browsing: `duckdb -ui -cmd "attach 'petfolk.duckdb' as petfolk (read_only);"` with the Homebrew CLI. If `-ui` fails right after a DuckDB upgrade, the `ui` extension for that release is not published yet; retry later. A globally `-readonly` session breaks the UI's state catalog. Any open UI/CLI session holds a lock on the db - close it before `dbt build`.
 
 ## Conventions
 
